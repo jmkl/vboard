@@ -1,0 +1,189 @@
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-size: 16px;
+  /* Set a base font size */
+  line-height: 1.5;
+  font-family: Rubik, sans-serif;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img,
+picture,
+video,
+canvas {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.container {
+  background-color: #222;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.panel {
+  cursor: grabbing;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  padding: 4px 4px;
+  justify-content: space-between;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 5px;
+  justify-content: space-between;
+  height: 100%;
+  padding: 10px;
+}
+.rows {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 5px;
+  flex-grow: 1;
+}
+.key {
+  background-color: #424242;
+  color: #fff;
+  width: 15%;
+  height: 100%;
+  text-align: center;
+  border-radius: 5px;
+  flex-shrink: 1;
+}
+.key,
+.spacekey {
+  user-select: none;
+  box-shadow: 6px 6px 2px #14141444;
+}
+.key:hover,
+.spacekey:hover {
+  box-shadow: 0px 0px 0px #141414;
+  background-color: #323232;
+}
+.key:active,
+.spacekey:active {
+  background-color: rgba(163, 19, 19, 0.884);
+}
+.spacekey {
+  flex-grow: 1;
+  background-color: #424242;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.mtheme {
+  background-color: transparent;
+  font-family: "Roboto Condensed";
+  font-size: small;
+  font-weight: bold;
+}
+
+.mtheme .hg-button.hg-red {
+  background-color: #f40;
+  color: #fff;
+}
+.mtheme .hg-button.hg-button-control,
+.hg-button.hg-button-meta {
+  flex-grow: 0;
+  min-width: 60px;
+}
+.mtheme .hg-button.hg-button-space {
+  flex-shrink: 1;
+}
+.mtheme .hg-button {
+  background-color: #444;
+  color: #888;
+  border-bottom: 3px solid #111;
+}
+.mtheme .hg-button:hover {
+  background-color: #f40;
+  color: #ddd;
+  border-bottom: 3px solid #360101;
+  box-shadow: 0 0 5px #ff44004f;
+}
+.mtheme .hg-button:active {
+  background-color: #333;
+  color: #ddd;
+  border-bottom: 1px solid #111;
+}
+.mtheme .hg-button {
+  box-shadow: 0px 0px 2px #222;
+}
+.suggestion {
+  font-family: "Roboto Condensed";
+  font-weight: 100;
+
+  pointer-events: none;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  width: 100%;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+  gap: 5px;
+  padding: 0px 15px;
+}
+.suggestion > .sugg {
+  user-select: none;
+  pointer-events: auto;
+  font-size: 0.7rem;
+  background-color: #111;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+.suggestion > .sugg:hover {
+  background-color: #444;
+}
+
+.suggestion > .current-word {
+  pointer-events: none;
+  user-select: none;
+  font-size: 1rem;
+  font-weight: 900;
+}
