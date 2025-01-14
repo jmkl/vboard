@@ -19,7 +19,7 @@
     "nspell": "^2.1.5",
     "simple-keyboard": "^3.8.27",
     "simple-keyboard-autocorrect": "^2.2.529",
-    "tauri-plugin-taurimation-api": "file:..\\tauri-plugin-taurimation"
+    "tauri-plugin-taurimation-api": "https://github.com/jmkl/taurimation.git"
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "^3.0.6",
